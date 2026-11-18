@@ -1,0 +1,18 @@
+<div class="upload-container">
+  <h2>Dosya Yükle ve Sınıflandır</h2>
+
+  <input type="file" (change)="onFileSelected($event)" accept="image/*,application/pdf" />
+
+  <div *ngIf="selectedFile" class="file-info">
+    <p>Seçilen dosya: {{ selectedFile.name }}</p>
+  </div>
+
+  <button (click)="onUpload()">Yükle</button>
+
+  <div *ngIf="ocrLabel" class="ocr-result">
+    <h3>ML Sonucu:</h3>
+    <p><strong>Label:</strong> {{ ocrLabel }}</p>
+    <p><strong>Doğruluk:</strong> {{ ocrAccuracy }}%</p>
+    <p *ngIf="tcKimlikNo"><strong>T.C. Kimlik No:</strong> {{ tcKimlikNo }}</p>
+  </div>
+</div>

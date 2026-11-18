@@ -1,0 +1,12 @@
+**/Logs/
+ScreenShots/
+*.bak
+*.mdf
+*.ldf
+*.bacpac
+*.pfx
+*.pem
+*.key
+.env
+.env.*
+!.env.example
